@@ -2,7 +2,8 @@ import bgImage from "../assets/about-bg.png";
 
 export default function AboutSection() {
   return (
-    <section id="about"
+    <section
+      id="about"
       className="relative px-4 sm:px-8 md:px-16 py-20 h-[60vh] text-center flex items-center justify-center"
       style={{
         background: `url(${bgImage.src}) center/cover no-repeat`,
@@ -23,14 +24,18 @@ export default function AboutSection() {
           className="text-4xl md:text-[42px] font-bold text-[#AA0E27] mb-6"
           style={{ fontFamily: "var(--font-montserrat)" }}
         >
-          Discover the Anandam Life
+          Shubhanandam Group
         </h2>
 
         {/* Paragraph */}
         <p className="text-lg md:text-xl font-inter mb-8 text-gray-100">
-          At Anandam Life, we blend luxury and comfort to create vibrant living
-          spaces. Our homes in Modipuram, Meerut are thoughtfully designed to
-          offer a smart investment and an elevated lifestyle.
+          A real estate brand committed to{" "}
+          <strong>affordable luxury, quality craftsmanship, </strong> and{" "}
+          <strong> timely delivery </strong>, Shubhanandam Group is redefining
+          residential living in Tier-2 cities. Backed by a strong leadership
+          team and a mission to deliver over{" "}
+          <strong> 100,000 homes by 2025 </strong>, the group is trusted by
+          hundreds of homeowners across Meerut.
         </p>
 
         {/* Button */}

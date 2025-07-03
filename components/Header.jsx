@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 import { HiMenu, HiX } from "react-icons/hi";
 import Image from "next/image";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/new-logo.png";
 
 const navLinks = [
   { name: "Home", href: "#home" },

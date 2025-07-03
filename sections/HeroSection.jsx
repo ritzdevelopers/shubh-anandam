@@ -42,7 +42,7 @@ export default function HeroSection() {
 
         {/* Key Subheading with bg gradient */}
         <p
-          className="mt-4 inline-block px-4 py-2 font-bold font-montserrat text-[#DABF70] text-base md:text-lg bg-gradient-to-r from-[#4C000C] to-transparent rounded-md"
+          className="mt-4 inline-block px-4 py-4 font-bold font-montserrat text-[#DABF70] text-base md:text-lg bg-gradient-to-r from-[#4C000C] to-transparent "
           style={{ fontFamily: "var(--font-playfair)" }}
         >
           Freehold | RERA Registered | Bank Loan Approved
