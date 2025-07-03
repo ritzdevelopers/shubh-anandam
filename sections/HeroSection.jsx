@@ -27,24 +27,21 @@ export default function HeroSection() {
       >
         {/* Gradient Heading */}
         <h1 className="text-4xl md:text-[68px]  font-bold leading-tight">
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E91335]  to-[#EDA019]">
+          <span className="block text-transparent bg-clip-text bg-[white]">
             Live the
           </span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E91335]  to-[#EDA019]">
+          <span className="block text-transparent bg-clip-text bg-[white]">
             Anandam Life
           </span>
         </h1>
 
         {/* Subheading */}
-        <p className="mt-6 text-lg md:text-[30px] font-bold font-inter text-[#E91335]">
-          2 & 3 BHK Luxury Builder Floors in <br /> Modipuram, Meerut
+        <p className="mt-6 text-lg md:text-[30px] font-bold font-inter text-[white]">
+          2 & 3 BHK LUXUERY BUILDER FLOORS IN <br /> MODIPURAM, MEERUT
         </p>
 
         {/* Key Subheading with bg gradient */}
-        <p
-          className="mt-4 inline-block px-4 py-4 font-bold font-montserrat text-[#DABF70] text-base md:text-lg bg-gradient-to-r from-[#4C000C] to-transparent "
-          style={{ fontFamily: "var(--font-playfair)" }}
-        >
+        <p className="mt-4 inline-block px-4 py-4 font-bold font-montserrat text-[#DABF70] text-base md:text-lg bg-gradient-to-r from-[#852438] to-transparent ">
           Freehold | RERA Registered | Bank Loan Approved
         </p>
       </div>

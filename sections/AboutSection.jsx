@@ -21,7 +21,7 @@ export default function AboutSection() {
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-[42px] font-bold text-[#AA0E27] mb-6"
+          className="text-4xl md:text-[42px] font-bold text-[white] mb-6"
           style={{ fontFamily: "var(--font-montserrat)" }}
         >
           Shubhanandam Group
@@ -41,7 +41,7 @@ export default function AboutSection() {
         {/* Button */}
         <a
           href="/about"
-          className="inline-block px-6 py-3 bg-[white] text-black hover:text-white font-semibold rounded-4xl hover:bg-[#880b1f] transition"
+          className="inline-block px-6 py-3 bg-[white] text-black hover:text-white font-semibold rounded-4xl hover:bg-[#852438] transition"
         >
           Book a site visit now
         </a>

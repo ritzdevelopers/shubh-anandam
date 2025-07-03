@@ -54,14 +54,14 @@ const Header = () => {
             {navLinks.map(({ name, href }) => (
               <li key={name}>
                 <Link href={href}>
-                  <span className="relative cursor-pointer text-[#DABF70] transition-colors hover:text-[#E91335] hover:underline">
+                  <span className="relative cursor-pointer text-[#DABF70] transition-colors hover:text-[#852438] hover:underline">
                     {name}
                   </span>
                 </Link>
               </li>
             ))}
           </ul>
-          <button className="ml-4 bg-white text-black px-4 py-2 rounded-4xl hover:bg-[#E91335] hover:text-white transition cursor-pointer">
+          <button className="ml-4 bg-white text-black px-4 py-2 rounded-4xl hover:bg-[#852438] hover:text-white transition cursor-pointer">
             Get Started
           </button>
         </div>

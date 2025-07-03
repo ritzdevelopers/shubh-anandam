@@ -12,21 +12,30 @@ export default function LocationSection() {
     <section className="w-full py-16 px-4 sm:px-16 flex flex-col sm:flex-row items-center sm:gap-12">
       {/* Left Side - Heading, Subheading, Key Points */}
       <div className="w-full sm:w-1/2 space-y-6 text-center sm:text-left">
-        <h2
-          className="text-[36px] font-bold text-[#630412]"
-          style={{ fontFamily: "var(--font-montserrat)" }}
-        >
-          LOCATION ADVANTAGE
-        </h2>
+        <div className="sm:flex gap-2.5">
+          <h2
+            className="text-[36px] font-bold text-[#852438]"
+            style={{ fontFamily: "var(--font-montserrat)" }}
+          >
+            LOCATION
+          </h2>
+          <h2 className="text-[36px] font-bold text-[black]">ADVANTAGE</h2>
+        </div>
+
         <p className="text-[26px] text-gray-700">
           MODIPURAM, MEERUT - THE NEW URBAN HUB
         </p>
-
         {/* Key Points List */}
         <ul className="space-y-4 mt-6">
           <li className="flex items-center space-x-4  bg-gray-100 p-4 rounded-xl">
-            <span className="sm:w-[100px] sm:h-[100px] border border-gray-200 bg-white rounded-full flex items-center justify-center">
-              <Image src={lcoation1} alt="location" width={100} height={100} />
+            <span className=" bg-white rounded-full flex items-center justify-center">
+              <Image
+                src={lcoation1}
+                alt="location"
+                width={100}
+                height={100}
+                className="sm:w-[100px] sm:h-[100px] border border-gray-200 rounded-full"
+              />
             </span>
             <div>
               <h3 className="font-semibold text-lg">
@@ -36,8 +45,14 @@ export default function LocationSection() {
           </li>
 
           <li className="flex items-center space-x-4 bg-gray-100 p-4 rounded-xl">
-            <span className="sm:w-[100px] sm:h-[100px] border border-gray-200 bg-white rounded-full flex items-center justify-center">
-              <Image src={lcoation2} alt="location" width={100} height={100} />
+            <span className=" bg-white rounded-full flex items-center justify-center">
+              <Image
+                src={lcoation2}
+                alt="location"
+                width={100}
+                height={100}
+                className="sm:w-[100px] sm:h-[100px] border border-gray-200 rounded-full"
+              />
             </span>
             <div>
               <h3 className="font-semibold text-lg">
@@ -47,8 +62,14 @@ export default function LocationSection() {
           </li>
 
           <li className="flex items-center space-x-4 bg-gray-100 p-4 rounded-xl">
-            <span className="sm:w-[100px] sm:h-[100px] w-19 h-19 border border-gray-200 bg-white rounded-full flex items-center justify-center">
-              <Image src={lcoation3} alt="location" width={100} height={100} />
+            <span className=" bg-white rounded-full flex items-center justify-center">
+              <Image
+                src={lcoation3}
+                alt="location"
+                width={70}
+                height={70}
+                className="sm:w-[100px] sm:h-[100px] border border-gray-200 rounded-full"
+              />
             </span>
             <div>
               <h3 className="font-semibold text-lg">
@@ -58,8 +79,14 @@ export default function LocationSection() {
           </li>
 
           <li className="flex items-center space-x-4 bg-gray-100 p-4 rounded-xl">
-            <span className="sm:w-[100px] sm:h-[100px] border border-gray-200 bg-white rounded-full flex items-center justify-center">
-              <Image src={lcoation4} alt="location" width={100} height={100} />
+            <span className="bg-white rounded-full flex items-center justify-center">
+              <Image
+                src={lcoation4}
+                alt="location"
+                width={100}
+                height={100}
+                className="sm:w-[100px] sm:h-[100px] border border-gray-200 rounded-full"
+              />
             </span>
             <div>
               <h3 className="font-semibold text-lg">
