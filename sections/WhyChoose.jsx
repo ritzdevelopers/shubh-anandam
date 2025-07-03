@@ -303,7 +303,7 @@ export default function WhyChoose() {
           <Image
             src={sampleImage}
             alt="Why Choose Anandam Life"
-            className="object-cover rounded-md"
+            className="object-cover "
             width={520}
             height={520}
             priority
