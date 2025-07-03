@@ -6,13 +6,14 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaLinkedin,
-} from 'react-icons/fa';
-import backgroundImage from '../assets/footer-bg.png';
-import logoImage from '../assets/logo.png';
+} from "react-icons/fa";
+import backgroundImage from "../assets/footer-bg.png";
+import logoImage from "../assets/logo.png";
 
 export default function Footer() {
   return (
-    <footer id='footer'
+    <footer
+      id="footer"
       className="relative h-[450px] bg-cover bg-center text-white flex flex-col justify-between"
       style={{ backgroundImage: `url(${backgroundImage.src})` }}
     >
@@ -58,10 +59,26 @@ export default function Footer() {
           <div className="flex flex-col text-[#DABF70CC]">
             <h4 className="text-lg font-semibold mb-4">Useful Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-400">Home</a></li>
-              <li><a href="#" className="hover:text-gray-400">About Us</a></li>
-              <li><a href="#" className="hover:text-gray-400">Services</a></li>
-              <li><a href="#" className="hover:text-gray-400">Contact</a></li>
+              <li>
+                <a href="#" className="hover:text-gray-400">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-400">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-400">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-400">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -91,8 +108,11 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="relative z-10 bg-[#41000A] bg-opacity-80 text-center text-sm py-4">
-        <p>&copy; 2025 YourCompany. All Rights Reserved.</p>
+      <div className="relative z-10 bg-[#41000A] text-[#DABF70CC] bg-opacity-80 text-center text-sm py-4">
+        <p>
+          &copy; Shubh Anandam Pvt Ltd 2025. | All Rights Reserved | Developed
+          by ritzmediaworld.com
+        </p>
       </div>
     </footer>
   );
