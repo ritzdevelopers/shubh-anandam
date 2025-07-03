@@ -4,7 +4,7 @@ import backgroundImage from "../assets/hightlights-bg.png"; // Replace with your
 export default function HighlightsSection() {
   return (
     <section
-      className="relative w-full py-24 h-[50vh] px-4 sm:px-16 bg-cover bg-center flex items-center justify-center"
+      className="relative w-full py-24 min-h-[50vh] px-4 sm:px-16 bg-cover bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${backgroundImage.src})` }}
     >
       {/* Dark overlay */}
