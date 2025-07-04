@@ -23,13 +23,25 @@ export default function ProjectSection() {
 
   const projects = [
     {
-      title: "Luxury Floors",
-      subtitle: "Modipuram, Meerut",
+      title: "Anandam Floor I",
+      subtitle: "lorem lorem lorem lorem lorem",
       image: sampleImage2,
     },
-    { title: "Green Villas", subtitle: "Ansal Town", image: sampleImage1 },
-    { title: "Smart Towers", subtitle: "City Center", image: sampleImage2 },
-    { title: "Urban Heights", subtitle: "NH-58", image: sampleImage1 },
+    {
+      title: "Anandam Floor II",
+      subtitle: "lorem loremlorem lorem",
+      image: sampleImage1,
+    },
+    {
+      title: "Anandam Floor III",
+      subtitle: "lorem lorem lorem lorem lorem",
+      image: sampleImage2,
+    },
+    {
+      title: "Anandam Floor IV",
+      subtitle: "lorem lorem lorems",
+      image: sampleImage1,
+    },
   ];
 
   return (
@@ -86,7 +98,7 @@ export default function ProjectSection() {
                 </div>
                 <div className="p-5 text-left shadow-3xl bg-white">
                   <h3
-                    className="text-xl font-semibold text-gray-800"
+                    className="text-xl font-semibold text-[#DABF70]"
                     style={{ fontFamily: "var(--font-montserrat)" }}
                   >
                     {project.title}
