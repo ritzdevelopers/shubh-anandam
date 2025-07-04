@@ -4,13 +4,13 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative px-4 sm:px-8 md:px-16 py-20 h-[60vh] text-center flex items-center justify-center"
+      className="relative px-4 sm:px-8 md:px-16 py-20 h-[70vh] text-center flex items-center justify-center"
       style={{
         background: `url(${bgImage.src}) center/cover no-repeat`,
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70 bg-opacity-50"></div>
+      {/* <div className="absolute inset-0 bg-black/70 bg-opacity-50"></div> */}
 
       {/* Content */}
       <div className="relative z-10 max-w-3xl mx-auto text-white">
@@ -21,7 +21,7 @@ export default function AboutSection() {
 
         {/* Heading */}
         <h2
-          className="text-4xl md:text-[42px] font-bold text-[white] mb-6"
+          className="text-4xl md:text-[42px] font-bold text-[#DABF70] mb-6"
           style={{ fontFamily: "var(--font-montserrat)" }}
         >
           Shubhanandam Group
@@ -40,7 +40,7 @@ export default function AboutSection() {
 
         {/* Button */}
         <a
-          href="/about"
+          href="#contact"
           className="inline-block px-6 py-3 bg-[white] text-black hover:text-white font-semibold rounded-4xl hover:bg-[#852438] transition"
         >
           Book a site visit now

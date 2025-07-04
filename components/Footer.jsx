@@ -14,14 +14,14 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative min-h-[460px] md:h-[450px] py-1 px-4 sm:px-8 md:px-[86px] bg-cover bg-center text-white flex flex-col justify-between"
+      className="relative min-h-[460px] md:h-[450px] py-1  bg-cover bg-center text-white flex flex-col justify-between"
       style={{ backgroundImage: `url(${backgroundImage.src})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#41000A] opacity-90"></div>
+      {/* <div className="absolute inset-0 bg-[#41000A] opacity-90"></div> */}
 
       {/* Main Content */}
-      <div className="relative z-10 flex-1 flex items-center">
+      <div className="relative z-10 flex-1 flex items-center px-4 sm:px-8 md:px-[86px]">
         <div className="container mx-auto flex flex-col md:flex-row flex-wrap justify-between items-start gap-8">
           {/* Logo + Social Links */}
           <div className="flex flex-col items-start max-w-xs w-full md:w-auto">
@@ -116,7 +116,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="relative z-10 bg-[#41000A] bg-opacity-80 text-[#dac07096] text-center text-sm py-4">
+      <div className="relative z-10 bg-[#621110]  bg-opacity-80 text-[#dac07096] text-center text-sm py-4">
         <p>
           <i>
             &copy; Shubh Anandam Pvt Ltd 2025. | All Rights Reserved | Developed

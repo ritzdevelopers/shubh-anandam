@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Add this at the top
-import sampleImage from "../assets/project-image-1.png"; // Replace with actual image
+import sampleImage1 from "../assets/project-image-1.png"; // Replace with actual image
+import sampleImage2 from "../assets/project-image-2.png"; // Replace with actual image
 import Image from "next/image";
 
 import AOS from "aos";
@@ -24,11 +25,11 @@ export default function ProjectSection() {
     {
       title: "Luxury Floors",
       subtitle: "Modipuram, Meerut",
-      image: sampleImage,
+      image: sampleImage2,
     },
-    { title: "Green Villas", subtitle: "Ansal Town", image: sampleImage },
-    { title: "Smart Towers", subtitle: "City Center", image: sampleImage },
-    { title: "Urban Heights", subtitle: "NH-58", image: sampleImage },
+    { title: "Green Villas", subtitle: "Ansal Town", image: sampleImage1 },
+    { title: "Smart Towers", subtitle: "City Center", image: sampleImage2 },
+    { title: "Urban Heights", subtitle: "NH-58", image: sampleImage1 },
   ];
 
   return (
@@ -73,14 +74,15 @@ export default function ProjectSection() {
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <div className=" rounded  overflow-hidden">
-                <div className="relative">
+              <div className=" rounded  overflow-hidden rounded-t-4xl">
+                <div className="relative ">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full rounded-t-4xl object-cover 
+                    transition-transform duration-300 ease-in-out hover:scale-105"
                   />
-                  <div className="absolute rounded-4xl inset-0 bg-gradient-to-t to-[#B2001A]/20 from-[#4C000B]/20 z-10"></div>
+                  {/* <div className="absolute rounded-4xl inset-0 bg-gradient-to-t to-[#B2001A]/20 from-[#4C000B]/20 z-10 pointer-events-none"></div> */}
                 </div>
                 <div className="p-5 text-left shadow-3xl bg-white">
                   <h3

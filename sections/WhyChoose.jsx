@@ -67,90 +67,91 @@ export default function WhyChoose() {
       <div className="absolute inset-0 bg-pink-50 opacity-20 pointer-events-none"></div>
 
       {/* Content - Heading at top left */}
-      <div className="relative z-10 max-w-4xl mb-12">
-        <div className="mb-8 text-left">
-          <h2
-            className="text-3xl sm:text-4xl font-bold leading-tight"
-            style={{ fontFamily: "var(--font-montserrat)" }}
-          >
-            <span className="block text-black">Why Choose</span>
-            <span className="block text-[#AA0E27]">Anandam Floors?</span>
-          </h2>
-          <p className="mt-4 text-gray-700 font-inter text-lg sm:text-xl">
-            Experience the joy of elevated living with Shubhanandam Group’s
-            flagship project — a thoughtfully planned community offering luxury,
-            privacy, and comfort at an unmatched value.
-          </p>
+      <div className="z-40 bg-white">
+        <div className="relative z-10 max-w-4xl mb-12">
+          <div className="mb-8 text-left">
+            <h2
+              className="text-3xl sm:text-4xl font-bold leading-tight"
+              style={{ fontFamily: "var(--font-montserrat)" }}
+            >
+              <span className="block text-black">Why Choose</span>
+              <span className="block text-[#AA0E27]">Anandam Floors?</span>
+            </h2>
+            <p className="mt-4 text-gray-700 font-inter text-lg sm:text-xl">
+              Experience the joy of elevated living with Shubhanandam Group’s
+              flagship project — a thoughtfully planned community offering
+              luxury, privacy, and comfort at an unmatched value.
+            </p>
+          </div>
         </div>
-      </div>
 
-      {/* Columns container - responsive */}
-      <div
-        className="
-          bg-white rounded-lg px-6 py-8
-          flex flex-col md:flex-row gap-8 md:gap-[60px] items-start
-          self-end mt-auto w-full max-w-[1400px] z-10 absolute bottom-0 right-0
+        {/* Columns container - responsive */}
+        <div
+          className="
+           rounded-lg 
+          flex flex-col md:flex-row gap-8 md:gap-[60px] z-10 
         "
-        style={{ fontFamily: "var(--font-montserrat)" }}
-      >
-        {/* Column 1 - Key points list with icons */}
-        <div className="space-y-6 flex-1 min-w-[280px] max-w-[400px]">
-          <ul className="space-y-[26px]">
-            {points.map((point, idx) => (
-              <li
-                key={point.title}
-                onClick={() => setSelectedIndex(idx)}
-                className={`flex items-center gap-3 cursor-pointer font-montserrat text-gray-800 ${
-                  selectedIndex === idx ? "text-[#AA0E27] font-semibold" : ""
-                }`}
-              >
-                <FaRegCheckCircle
-                  className={`w-6 h-6 flex-shrink-0 ${
-                    selectedIndex === idx ? "text-[#AA0E27]" : ""
-                  }`}
-                />
-                <span
-                  className={`text-[16px] sm:text-[18px] ${
-                    selectedIndex === idx ? "text-[#AA0E27]" : ""
+          style={{ fontFamily: "var(--font-montserrat)" }}
+        >
+          {/* Column 1 - Key points list with icons */}
+          <div className="space-y-6 flex-1 min-w-[280px] max-w-[400px]">
+            <ul className="space-y-[26px]">
+              {points.map((point, idx) => (
+                <li
+                  key={point.title}
+                  onClick={() => setSelectedIndex(idx)}
+                  className={`flex items-center gap-3 cursor-pointer font-montserrat text-gray-800 ${
+                    selectedIndex === idx ? "text-[#AA0E27] font-semibold" : ""
                   }`}
                 >
-                  {point.title}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 2 - Details for selected item with responsive widths */}
-        <div className="space-y-6 flex-1 min-w-[280px] max-w-[450px] w-full">
-          <div className="text-gray-900 font-semibold text-lg font-montserrat space-y-[26px]">
-            <address>
-              <p>
-                Details about{" "}
-                <span className="text-[#AA0E27]">
-                  {points[selectedIndex].title}
-                </span>
-                :
-              </p>
-            </address>
+                  <FaRegCheckCircle
+                    className={`w-6 h-6 flex-shrink-0 ${
+                      selectedIndex === idx ? "text-[#AA0E27]" : ""
+                    }`}
+                  />
+                  <span
+                    className={`text-[16px] sm:text-[18px] ${
+                      selectedIndex === idx ? "text-[#AA0E27]" : ""
+                    }`}
+                  >
+                    {point.title}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="space-y-[22px] font-inter text-gray-700 list-disc list-inside text-sm sm:text-base">
-            {points[selectedIndex].details.map((detail, i) => (
-              <li key={i}>{detail}</li>
-            ))}
-          </ul>
-        </div>
 
-        {/* Column 3 - Image */}
-        <div className="flex justify-end max-w-[700px] w-full flex-1 min-w-[280px]">
-          <Image
-            src={sampleImage}
-            alt="Why Choose Anandam Life"
-            className="object-cover "
-            width={520}
-            height={520}
-            priority
-          />
+          {/* Column 2 - Details for selected item with responsive widths */}
+          <div className="space-y-6 flex-1 min-w-[280px] max-w-[450px] w-full">
+            <div className="text-gray-900 font-semibold text-lg font-montserrat space-y-[26px]">
+              <address>
+                <p>
+                  Details about{" "}
+                  <span className="text-[#AA0E27]">
+                    {points[selectedIndex].title}
+                  </span>
+                  :
+                </p>
+              </address>
+            </div>
+            <ul className="space-y-[22px] font-inter text-gray-700 list-disc list-inside text-sm sm:text-base">
+              {points[selectedIndex].details.map((detail, i) => (
+                <li key={i}>{detail}</li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3 - Image */}
+          <div className="flex justify-end max-w-[700px] w-full flex-1 min-w-[280px]">
+            <Image
+              src={sampleImage}
+              alt="Why Choose Anandam Life"
+              className="object-cover "
+              width={520}
+              height={520}
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
