@@ -34,28 +34,32 @@ export default function Footer() {
               {/* Each social icon wrapped in a circle */}
               <a
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-[#E91335] hover:text-white transition"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-[black] hover:text-white  
+                    transition-transform duration-300 ease-in-out hover:scale-120"
                 aria-label="Facebook"
               >
                 <FaFacebook />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white transition"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white 
+                    transition-transform duration-300 ease-in-out hover:scale-120"
                 aria-label="Twitter"
               >
                 <FaTwitter />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white transition"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white 
+                    transition-transform duration-300 ease-in-out hover:scale-120"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white transition"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white 
+                    transition-transform duration-300 ease-in-out hover:scale-120"
                 aria-label="Instagram"
               >
                 <FaInstagram />

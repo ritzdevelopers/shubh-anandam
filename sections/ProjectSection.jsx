@@ -75,7 +75,7 @@ export default function ProjectSection() {
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
               <div className=" rounded  overflow-hidden rounded-t-4xl">
-                <div className="relative ">
+                <div className="relative overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}

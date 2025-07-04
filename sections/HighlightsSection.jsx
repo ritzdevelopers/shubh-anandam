@@ -4,7 +4,14 @@ import Lock2LineIcon from "remixicon-react/Lock2LineIcon";
 import Home8LineIcon from "remixicon-react/Home8LineIcon";
 import { LuMedal } from "react-icons/lu";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function HighlightsSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true, offset: 100 });
+  }, []);
   return (
     <section
       className="relative w-full py-24 min-h-[50vh] px-4 sm:px-16 bg-cover bg-center flex items-center justify-center"
@@ -15,7 +22,10 @@ export default function HighlightsSection() {
 
       {/* Content */}
       <div className="relative z-10 text-center w-full">
-        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8">
+        <div
+          className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8"
+          data-aos="fade-down"
+        >
           {/* Card 1 */}
           <div className="w-full sm:w-[90%] md:w-[300px] lg:w-[350px] p-8 rounded-xl shadow-xl hover:shadow-2xl bg-white transition transform hover:scale-105 duration-300 ease-in-out">
             <div className="flex justify-center items-center mb-4">

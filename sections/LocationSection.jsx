@@ -7,7 +7,14 @@ import lcoation3 from "../assets/location3.png";
 import lcoation4 from "../assets/location4.png";
 import locationImage from "../assets/location-map.png";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function LocationSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true, offset: 100 });
+  }, []);
   return (
     <section className="w-full py-16 px-4 sm:px-16 flex flex-col sm:flex-row items-center sm:gap-12">
       {/* Left Side - Heading, Subheading, Key Points */}
@@ -26,7 +33,7 @@ export default function LocationSection() {
           MODIPURAM, MEERUT - THE NEW URBAN HUB
         </p>
         {/* Key Points List */}
-        <ul className="space-y-4 mt-6">
+        <ul className="space-y-4 mt-6" data-aos="fade-down">
           <li className="flex items-center space-x-4  bg-gray-100 p-4 rounded-xl">
             <span className=" bg-white rounded-full flex items-center justify-center">
               <Image

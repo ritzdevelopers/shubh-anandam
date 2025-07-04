@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import sampleImage from "../assets/why-choose.png";
-import bgImage from "../assets/why-choose-bg.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const points = [
   {
@@ -57,27 +58,27 @@ const points = [
 export default function WhyChoose() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, offset: 100 });
+  }, []);
+
   return (
-    <section
-      className="relative flex flex-col justify-between px-4 sm:px-8 md:px-[86px] mx-auto py-16 min-h-[85vh]"
-      style={{ background: `url(${bgImage.src}) center/cover no-repeat` }}
-    >
+    <section className="relative flex flex-col justify-between px-4 sm:px-8 md:px-[86px] mx-auto py-16 min-h-[80vh]">
       {/* White thin overlay */}
       <div className="absolute inset-0 bg-white opacity-90 pointer-events-none"></div>
       <div className="absolute inset-0 bg-pink-50 opacity-20 pointer-events-none"></div>
 
       {/* Content - Heading at top left */}
       <div className="z-40 bg-white">
-        <div className="relative z-10 max-w-4xl mb-12">
+        <div className="relative z-10 max-w-[70rem] mb-12">
           <div className="mb-8 text-left">
             <h2
-              className="text-3xl sm:text-4xl font-bold leading-tight"
+              className="text-3xl sm:text-4xl font-[600] leading-tight text-[#852438]"
               style={{ fontFamily: "var(--font-montserrat)" }}
             >
-              <span className="block text-black">Why Choose</span>
-              <span className="block text-[#AA0E27]">Anandam Floors?</span>
+              WHY CHOOSE ANANDAM FLOORS?
             </h2>
-            <p className="mt-4 text-gray-700 font-inter text-lg sm:text-xl">
+            <p className="mt-4 text-gray-700 font-inter text-[20px] sm:text-[24px]">
               Experience the joy of elevated living with Shubhanandam Group’s
               flagship project — a thoughtfully planned community offering
               luxury, privacy, and comfort at an unmatched value.
@@ -142,11 +143,15 @@ export default function WhyChoose() {
           </div>
 
           {/* Column 3 - Image */}
-          <div className="flex justify-end max-w-[700px] w-full flex-1 min-w-[280px]">
+          <div
+            className="flex justify-end max-w-[700px] w-full flex-1 min-w-[280px]"
+            data-aos="zoom-in-left"
+          >
             <Image
               src={sampleImage}
               alt="Why Choose Anandam Life"
-              className="object-cover "
+              className="object-cover 
+                    transition-transform duration-300 ease-in-out hover:scale-101"
               width={520}
               height={520}
               priority
