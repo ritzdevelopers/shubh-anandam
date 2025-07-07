@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Shubh Anandam</title>
+    <style>
+      :root {
+        --font-montserrat: "Montserrat", sans-serif;
+        --font-inter: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      id="site-header"
+      class="fixed top-0 left-0 w-full z-50 transition-transform duration-500 ease-in-out"
+      data-aos="fade-down"
+    >
+      <nav
+        class="px-4 sm:px-6 lg:px-[86px] flex items-center justify-between py-[10px]"
+      >
+        <!-- Logo -->
+        <div class="text-white font-bold text-xl">
+          <img
+            id="header-logo"
+            src="./assets/logo.png"
+            alt="logo"
+            class="w-auto object-contain"
+          />
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-6">
+          <ul class="flex gap-6 text-[#DABF70] font-medium">
+            <li>
+              <a
+                href="#home"
+                class="relative text-[white] hover:text-[#DABF70] hover:underline text-[16px]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="relative text-[white] hover:text-[#DABF70] hover:underline text-[16px]"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="relative text-[white] hover:text-[#DABF70] hover:underline text-[16px]"
+                >Our Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="relative text-[white] hover:text-[#DABF70] hover:underline text-[16px]"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <a
+            href="#contact"
+            class="ml-4 text-white px-6 py-2 rounded-4xl bg-[#852438] hover:bg-[#DABF70] hover:text-white transition cursor-pointer"
+          >
+            Call now
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div
+          class="md:hidden text-white text-3xl cursor-pointer"
+          id="mobile-menu-toggle"
+          role="button"
+          tabindex="0"
+          aria-label="Toggle menu"
+        >
+          &#9776;
+          <!-- Fallback menu icon -->
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full bg-black text-white py-6 px-6 space-y-6 z-40 shadow-md"
+      >
+        <ul class="flex flex-col gap-4">
+          <li>
+            <a
+              href="#home"
+              class="block text-lg font-medium text-[#DABF70] hover:text-[#E91335]"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block text-lg font-medium text-[#DABF70] hover:text-[#E91335]"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="block text-lg font-medium text-[#DABF70] hover:text-[#E91335]"
+              >Our Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block text-lg font-medium text-[#DABF70] hover:text-[#E91335]"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <button
+          id="close-mobile-menu"
+          class="w-full bg-[#852438] text-white px-4 py-2 rounded-4xl hover:bg-[#DABF70] hover:text-black transition-colors"
+        >
+          Contact Us
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      data-aos="zoom-out"
+      class="relative h-screen sm:min-h-[100vh] flex items-center px-4 sm:px-8 md:px-[86px] text-white bg-cover bg-center bg-no-repeat"
+      style="background-image: url('./assets/hero-bg.png')"
+    >
+      <div
+        class="relative z-10 pt-16 md:pt-24"
+        style="font-family: var(--font-montserrat)"
+      >
+        <h1 class="text-4xl md:text-[68px] font-[700] leading-tight">
+          <span class="block text-transparent bg-clip-text bg-[white]">
+            Live the
+          </span>
+          <span class="block text-transparent bg-clip-text bg-[white]">
+            Anandam Life
+          </span>
+        </h1>
+
+        <p class="mt-6 text-lg md:text-[30px]">
+          2 & 3 BHK LUXUERY BUILDER FLOORS IN <br />
+          MODIPURAM, MEERUT
+        </p>
+
+        <p
+          class="mt-4 inline-block px-4 py-4 font-bold text-[#DABF70] text-[18px] md:text-[30px] bg-gradient-to-r from-[#852438] to-[black]"
+          style="font-family: var(--font-montserrat)"
+        >
+          Freehold | RERA Registered | Bank Loan Approved
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section
+      class="relative flex flex-col justify-between px-4 sm:px-8 md:px-[86px] mx-auto py-16 min-h-[80vh]"
+    >
+      <!-- Overlay -->
+      <div
+        class="absolute inset-0 bg-white opacity-90 pointer-events-none"
+      ></div>
+      <div
+        class="absolute inset-0 bg-pink-50 opacity-20 pointer-events-none"
+      ></div>
+
+      <!-- Content -->
+      <div class="z-40 bg-white relative">
+        <div class="max-w-[70rem] mb-12">
+          <div class="mb-8 text-left">
+            <h2
+              class="text-3xl sm:text-4xl font-[600] leading-tight text-[#852438]"
+              style="font-family: var(--font-montserrat)"
+            >
+              WHY CHOOSE ANANDAM FLOORS?
+            </h2>
+            <p
+              class="mt-4 text-gray-700"
+              style="font-family: var(--font-inter); font-size: 20px"
+            >
+              Experience the joy of elevated living with Shubhanandam Group’s
+              flagship project — a thoughtfully planned community offering
+              luxury, privacy, and comfort at an unmatched value.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3-Column Flex -->
+        <div
+          class="rounded-lg flex flex-col md:flex-row gap-8 md:gap-[60px] z-10"
+          style="font-family: var(--font-montserrat)"
+        >
+          <!-- Column 1: Selectable Points -->
+          <div class="space-y-6 flex-1 min-w-[280px] max-w-[400px]">
+            <ul id="whychoose-tabs" class="space-y-[26px]">
+              <!-- JS will insert <li> items here -->
+            </ul>
+          </div>
+
+          <!-- Column 2: Details -->
+          <div class="space-y-6 flex-1 min-w-[280px] max-w-[450px] w-full">
+            <div
+              class="text-gray-900 font-semibold text-lg font-montserrat space-y-[26px]"
+            >
+              <address>
+                <p>
+                  Details about
+                  <span id="whychoose-title" class="text-[#AA0E27]"
+                    >Premium Lifestyle, Affordable Price</span
+                  >:
+                </p>
+              </address>
+            </div>
+            <ul
+              id="whychoose-details"
+              class="space-y-[22px] font-inter text-gray-700 list-disc list-inside text-sm sm:text-base"
+            >
+              <!-- JS will insert <li> items here -->
+            </ul>
+          </div>
+
+          <!-- Column 3: Image -->
+          <div
+            class="flex justify-end max-w-[700px] w-full flex-1 min-w-[280px]"
+            data-aos="zoom-in-left"
+          >
+            <img
+              src="./assets/why-choose.png"
+              alt="Why Choose Anandam Life"
+              class="object-cover transition-transform duration-300 ease-in-out hover:scale-[1.01]"
+              width="520"
+              height="520"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="relative px-4 sm:px-8 md:px-16 py-20 h-[70vh] text-center flex items-center justify-center"
+      style="background: url('./assets/about-bg.png') center/cover no-repeat"
+    >
+      <!-- Content Wrapper -->
+      <div class="relative z-10 max-w-3xl mx-auto text-white">
+        <!-- Subheading -->
+        <p
+          class="text-[24px] uppercase tracking-wider mb-3 font-semibold text-white"
+        >
+          About
+        </p>
+
+        <!-- Heading -->
+        <h2
+          class="text-4xl md:text-[42px] font-[600] text-[#DABF70] mb-6"
+          style="font-family: var(--font-montserrat)"
+        >
+          SHUBHANANDAM GROUP
+        </h2>
+
+        <!-- Paragraph -->
+        <p class="text-lg md:text-[22px] font-inter mb-8 text-gray-100">
+          A real estate brand committed to
+          <span class="font-[600]"
+            >affordable luxury, quality craftsmanship,</span
+          >
+          and
+          <span class="font-[600]">timely delivery</span>, Shubhanandam Group is
+          redefining residential living in Tier-2 cities. Backed by a span
+          leadership team and a mission to deliver over
+          <span class="font-[600]">100,000 homes by 2025</span>, the group is
+          trusted by hundreds of homeowners across Meerut.
+        </p>
+
+        <!-- Call to Action Button -->
+        <a
+          href="#contact"
+          class="inline-block px-6 py-3 bg-white text-black hover:text-white font-semibold rounded-4xl hover:bg-[#DABF70] transition"
+          data-aos="fade-in"
+        >
+          Book a site visit now
+        </a>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section
+      id="projects"
+      data-aos="zoom-in"
+      class="px-4 sm:px-8 md:px-16 py-20 bg-[#f5f5f5] text-center"
+    >
+      <div class="mx-auto mb-12">
+        <h2
+          class="text-4xl md:text-5xl text-gray-900 mb-4"
+          style="font-family: var(--font-montserrat)"
+        >
+          PROJECTS
+        </h2>
+        <p
+          class="text-lg md:text-[36px] max-w-[1000px] mx-auto text-gray-600 font-inter"
+        >
+          EXPLORE SPACIOUS LAYOUTS WITH SMART DESIGN, NATURAL VENTILATIO, AND
+          MODERN INTERIORS.
+        </p>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto">
+        <!-- Swiper Container -->
+        <div class="swiper project-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide Template -->
+            <div class="swiper-slide">
+              <div class="rounded overflow-hidden rounded-t-4xl">
+                <img
+                  src="./assets/project-image-2.png"
+                  alt="Anandam Floor I"
+                  class="w-full h-full object-cover rounded-t-4xl transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+                <div class="p-5 text-left shadow-3xl bg-white">
+                  <h3
+                    class="text-xl font-semibold text-[#DABF70]"
+                    style="font-family: var(--font-montserrat)"
+                  >
+                    Anandam Floor I
+                  </h3>
+                  <p class="text-gray-600 font-inter">
+                    lorem lorem lorem lorem lorem
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="rounded overflow-hidden rounded-t-4xl">
+                <img
+                  src="./assets/project-image-2.png"
+                  alt="Anandam Floor I"
+                  class="w-full h-full object-cover rounded-t-4xl transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+                <div class="p-5 text-left shadow-3xl bg-white">
+                  <h3
+                    class="text-xl font-semibold text-[#DABF70]"
+                    style="font-family: var(--font-montserrat)"
+                  >
+                    Anandam Floor I
+                  </h3>
+                  <p class="text-gray-600 font-inter">
+                    lorem lorem lorem lorem lorem
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="rounded overflow-hidden rounded-t-4xl">
+                <img
+                  src="./assets/project-image-2.png"
+                  alt="Anandam Floor I"
+                  class="w-full h-full object-cover rounded-t-4xl transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+                <div class="p-5 text-left shadow-3xl bg-white">
+                  <h3
+                    class="text-xl font-semibold text-[#DABF70]"
+                    style="font-family: var(--font-montserrat)"
+                  >
+                    Anandam Floor I
+                  </h3>
+                  <p class="text-gray-600 font-inter">
+                    lorem lorem lorem lorem lorem
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="rounded overflow-hidden rounded-t-4xl">
+                <img
+                  src="./assets/project-image-2.png"
+                  alt="Anandam Floor I"
+                  class="w-full h-full object-cover rounded-t-4xl transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+                <div class="p-5 text-left shadow-3xl bg-white">
+                  <h3
+                    class="text-xl font-semibold text-[#DABF70]"
+                    style="font-family: var(--font-montserrat)"
+                  >
+                    Anandam Floor I
+                  </h3>
+                  <p class="text-gray-600 font-inter">
+                    lorem lorem lorem lorem lorem
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Copy above block for other slides -->
+          </div>
+        </div>
+
+        <!-- Custom Buttons -->
+        <div class="mt-12 flex justify-center items-center gap-4">
+          <button
+            class="custom-prev w-[60px] h-[60px] flex items-center justify-center rounded-full bg-white text-black shadow-md hover:shadow-lg border border-black"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            class="custom-next w-[60px] h-[60px] flex items-center justify-center rounded-full bg-white text-black shadow-md hover:shadow-lg border border-black"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enquire Section -->
+    <section
+      id="contact"
+      class="relative w-full h-[90vh] px-4 sm:px-[86px] flex items-center justify-center bg-center bg-cover bg-no-repeat"
+      style="
+        background-image: url('./assets/enquire-bg.png');
+        background-attachment: fixed;
+      "
+    >
+      <!-- Content Container -->
+      <div
+        class="relative z-10 w-full text-center flex flex-col items-center justify-center gap-8"
+      >
+        <h1 class="text-xl sm:text-4xl font-bold text-white leading-tight">
+          Your Dream Home Awaits! Fill The Form <br />
+          And Let Us Take Care Of The Rest.
+        </h1>
+
+        <div
+          class="w-full sm:w-[55%] bg-white p-4 sm:p-6 rounded-4xl shadow-lg"
+        >
+          <h2
+            class="text-xl sm:text-3xl text-[#DABF70] mb-6 text-center"
+            style="font-family: var(--font-montserrat)"
+          >
+            Enquire Now
+          </h2>
+          <form id="site-visit-form" class="flex flex-col gap-4">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                class="w-full h-[61px] px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                class="w-full h-[61px] px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+              />
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                name="phone"
+                placeholder="Your Phone"
+                class="w-full h-[61px] px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+              />
+              <input
+                type="text"
+                name="time"
+                placeholder="Preferred Time"
+                class="w-full h-[61px] px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+              />
+            </div>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              class="w-full px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+            ></textarea>
+            <button
+              type="submit"
+              class="mx-auto w-[241px] h-[50px] px-6 py-2 bg-[#852438] text-white rounded-4xl transition hover:bg-[#DABF70]"
+            >
+              Book a Site visit now
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section
+      class="w-full px-4 sm:px-0 flex flex-col-reverse sm:flex-row items-start relative mb-10"
+    >
+      <!-- Left Content -->
+      <div
+        class="w-full sm:w-1/2 py-8 sm:pl-16 sm:pr-10 text-center sm:text-left"
+      >
+        <div class="sm:flex gap-2.5 justify-start">
+          <h2
+            class="text-[36px] font-bold text-[#852438]"
+            style="font-family: var(--font-montserrat)"
+          >
+            LOCATION
+          </h2>
+          <h2 class="text-[36px] font-bold text-black">ADVANTAGE</h2>
+        </div>
+
+        <p class="text-[22px] sm:text-[26px] text-gray-700 mt-2">
+          MODIPURAM, MEERUT - THE NEW URBAN HUB
+        </p>
+
+        <ul class="space-y-4 mt-6">
+          <!-- Location Points -->
+          <li class="flex items-center gap-4 bg-gray-100 p-4 rounded-xl">
+            <div
+              class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] flex items-center justify-center bg-white border border-gray-200 rounded-full"
+            >
+              <img
+                src="./assets/location1.png"
+                alt="NH-58 & Delhi–Dehradun Expressway Access"
+                class="object-contain w-15 h-15"
+              />
+            </div>
+            <p class="text-left text-lg font-medium text-gray-800">
+              NH-58 & Delhi–Dehradun Expressway Access
+            </p>
+          </li>
+
+          <li class="flex items-center gap-4 bg-gray-100 p-4 rounded-xl">
+            <div
+              class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] flex items-center justify-center bg-white border border-gray-200 rounded-full"
+            >
+              <img
+                src="./assets/location2.png"
+                alt="Proposed Meerut Metro Station Nearby"
+                class="object-contain w-15 h-15"
+              />
+            </div>
+            <p class="text-left text-lg font-medium text-gray-800">
+              Proposed Meerut Metro Station Nearby
+            </p>
+          </li>
+
+          <li class="flex items-center gap-4 bg-gray-100 p-4 rounded-xl">
+            <div
+              class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] flex items-center justify-center bg-white border border-gray-200 rounded-full"
+            >
+              <img
+                src="./assets/location3.png"
+                alt="15 Minutes to City Centre"
+                class="object-contain w-15 h-15"
+              />
+            </div>
+            <p class="text-left text-lg font-medium text-gray-800">
+              15 Minutes to City Centre
+            </p>
+          </li>
+
+          <li class="flex items-center gap-4 bg-gray-100 p-4 rounded-xl">
+            <div
+              class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] flex items-center justify-center bg-white border border-gray-200 rounded-full"
+            >
+              <img
+                src="./assets/location4.png"
+                alt="Seamless Delhi-NCR Connectivity"
+                class="object-contain w-15 h-15"
+              />
+            </div>
+            <p class="text-left text-lg font-medium text-gray-800">
+              Seamless Delhi-NCR Connectivity
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Side - Map Image -->
+      <div class="w-full sm:w-1/2 relative mb-8 sm:mb-0">
+        <img
+          src="./assets/location-map.png"
+          alt="Location Map"
+          class="w-full h-auto"
+          style="max-width: 800px"
+        />
+      </div>
+    </section>
+
+    <section
+      class="relative w-full py-24 min-h-[50vh] px-4 sm:px-16 bg-cover bg-center flex items-center justify-center"
+      style="background-image: url('./assets/hightlights-bg.png')"
+    >
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-white opacity-45"></div>
+
+      <!-- Content -->
+      <div class="relative z-20 text-center w-full">
+        <div
+          class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8"
+        >
+          <!-- Card 1 -->
+          <div
+            class="w-full sm:w-[90%] md:w-[300px] lg:w-[350px] p-8 rounded-xl shadow-xl hover:shadow-2xl bg-white transition transform hover:scale-105 duration-300 ease-in-out"
+          >
+            <div class="flex justify-center items-center mb-4">
+              <!-- Lock2Line Icon -->
+              <i class="ri-lock-2-line text-gray-700 text-[40px]"></i>
+            </div>
+            <h3 class="text-[24px] font-semibold text-gray-900">
+              Trusted Developer
+            </h3>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="w-full sm:w-[90%] md:w-[300px] lg:w-[350px] p-8 rounded-xl shadow-xl hover:shadow-2xl bg-white transition transform hover:scale-105 duration-300 ease-in-out"
+          >
+            <div class="flex justify-center items-center mb-4">
+              <!-- Medal icon (use LuMedal equivalent SVG or icon font) -->
+              <!-- Using RemixIcon Medal icon -->
+              <i class="ri-medal-line text-gray-700 text-[40px]"></i>
+            </div>
+            <h3 class="text-[24px] font-semibold text-gray-900">
+              Ready-to-Move Options
+            </h3>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="w-full sm:w-[90%] md:w-[300px] lg:w-[350px] p-8 rounded-xl shadow-xl hover:shadow-2xl bg-white transition transform hover:scale-105 duration-300 ease-in-out"
+          >
+            <div class="flex justify-center items-center mb-4">
+              <!-- Home8Line Icon -->
+              <i class="ri-home-8-line text-gray-700 text-[40px]"></i>
+            </div>
+            <h3 class="text-[24px] font-semibold text-gray-900">
+              Home for Every Need
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      id="footer"
+      class="relative min-h-[460px] md:h-[450px] py-1 bg-cover bg-center text-white flex flex-col justify-between"
+      style="background-image: url('./assets/footer-bg.png')"
+    >
+      <!-- Uncomment overlay if you want it -->
+      <!-- <div class="absolute inset-0 bg-[#41000A] opacity-90"></div> -->
+
+      <!-- Main Content -->
+      <div
+        class="relative z-10 flex-1 flex items-center px-4 sm:px-8 md:px-[86px]"
+      >
+        <div
+          class="container mx-auto flex flex-col md:flex-row flex-wrap justify-between items-start gap-8"
+        >
+          <!-- Logo + Social Links -->
+          <div class="flex flex-col items-start max-w-xs w-full md:w-auto">
+            <img
+              src="./assets/logo.png"
+              alt="Logo"
+              class="mb-4 object-contain"
+            />
+            <div class="flex gap-4 mt-2">
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white transition-transform duration-300 ease-in-out hover:scale-110"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white transition-transform duration-300 ease-in-out hover:scale-110"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white transition-transform duration-300 ease-in-out hover:scale-110"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black hover:bg-black hover:text-white transition-transform duration-300 ease-in-out hover:scale-110"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Useful Links -->
+          <div
+            class="flex flex-col text-[#DABF70CC] w-full max-w-xs md:max-w-none md:w-auto"
+          >
+            <h4 class="text-[20px] font-semibold mb-4">Useful Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-[#feeab1cc]">Home</a></li>
+              <li><a href="#" class="hover:text-[#feeab1cc]">About Us</a></li>
+              <li><a href="#" class="hover:text-[#feeab1cc]">Services</a></li>
+              <li><a href="#" class="hover:text-[#feeab1cc]">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div
+            class="flex flex-col text-[18px] text-[#DABF70CC] w-full max-w-xs md:max-w-none md:w-auto"
+          >
+            <h4 class="text-[20px] font-semibold mb-4">Contact Us</h4>
+            <div class="flex items-start mb-2">
+              <i class="fas fa-phone mr-2 mt-1 flex-shrink-0"></i>
+              <span class="flex flex-col gap-1">
+                <span>0120- 350 0832</span>
+                <span>+91 9873401010</span>
+              </span>
+            </div>
+            <div class="flex items-start mb-2">
+              <i class="fas fa-map-marker-alt mr-2 mt-1 flex-shrink-0"></i>
+              <span class="flex flex-col gap-1">
+                <span>Near Sector 9, Ansal Town, Modipuram, Meerut</span>
+                <span>C-56/30, Sector 62, Noida, Uttar Pradesh</span>
+              </span>
+            </div>
+            <div class="flex items-center mb-2">
+              <i class="fas fa-envelope mr-2 flex-shrink-0"></i>
+              <span>support@shubhanandam.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+        class="relative z-10 bg-[#621110] bg-opacity-80 text-[#dac07096] text-center text-sm py-4"
+      >
+        <p>
+          <i
+            >&copy; Shubh Anandam Pvt Ltd 2025. | All Rights Reserved |
+            Developed by ritzmediaworld.com</i
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- DO NOT CHANGE BELOW THIS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
