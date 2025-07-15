@@ -95,7 +95,7 @@
             href="#contact"
             class="ml-4 text-white px-6 py-2 rounded-4xl bg-[#852438] hover:bg-[#DABF70] hover:text-white transition cursor-pointer"
           >
-            Call now
+            Enquire now
           </a>
         </div>
 
@@ -176,10 +176,10 @@
           </span>
         </h1>
 
-        <p class="mt-6 text-lg md:text-[30px]">
+        <!-- <p class="mt-6 text-lg md:text-[30px]">
           2 & 3 BHK LUXUERY BUILDER FLOORS IN <br />
           MODIPURAM, MEERUT
-        </p>
+        </p> -->
 
         <p
           class="mt-4 inline-block px-4 py-4 font-bold text-[#DABF70] text-[18px] md:text-[30px] bg-gradient-to-r from-[#852438] to-[black]"
@@ -877,6 +877,156 @@
         </p>
       </div>
     </footer>
+
+    <!-- POPUP -->
+    <!-- Modal Overlay -->
+    <div
+      id="popup-form-modal"
+      class="fixed inset-0 bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-500"
+    >
+      <!-- Modal Content -->
+      <div
+        id="popup-modal-content"
+        class="bg-white p-8 rounded-lg relative w-full max-w-2xl mx-4 scale-95 opacity-0 transition-all duration-500"
+      >
+        <!-- Close Button -->
+        <button
+          id="close-modal"
+          class="absolute top-0 right-1 text-gray-600 text-5xl hover:text-black"
+        >
+          &times;
+        </button>
+
+        <!-- Original Form -->
+        <form id="popup-site-visit-form" class="flex flex-col gap-4">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              class="w-full h-[61px] px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              class="w-full h-[61px] px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+            />
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input
+              type="text"
+              name="phone"
+              placeholder="Your Phone"
+              class="w-full h-[61px] px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+            />
+            <input
+              type="text"
+              name="time"
+              placeholder="Preferred Time"
+              class="w-full h-[61px] px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+            />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="4"
+            class="w-full px-5 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2"
+          ></textarea>
+          <button
+            type="submit"
+            class="mx-auto w-[241px] h-[50px] px-6 py-2 bg-[#852438] text-white rounded-4xl transition hover:bg-[#DABF70] cursor-pointer"
+          >
+            Book a Site Visit Now
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("popup-form-modal");
+        const content = document.getElementById("popup-modal-content");
+        const closeBtn = document.getElementById("close-modal");
+        const form = document.getElementById("popup-site-visit-form");
+
+        // Show modal after 1 second
+        setTimeout(() => {
+          modal.classList.remove("pointer-events-none", "opacity-0");
+          content.classList.remove("scale-95", "opacity-0");
+        }, 1000);
+
+        // Close modal
+        function closeModal() {
+          modal.classList.add("opacity-0", "pointer-events-none");
+          content.classList.add("opacity-0", "scale-95");
+        }
+
+        closeBtn.addEventListener("click", closeModal);
+
+        window.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+
+        // Form submission
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // ✅ Prevent reload
+
+          const formData = {
+            name: form.name.value.trim(),
+            email: form.email.value.trim(),
+            phone: form.phone.value.trim(),
+            time: form.time.value.trim(),
+            message: form.message.value.trim(),
+          };
+
+          // Basic validation
+          if (
+            !formData.name ||
+            !formData.email ||
+            !formData.phone ||
+            !formData.message
+          ) {
+            alert("Please fill in all required fields.");
+            return;
+          }
+
+          // Phone validation
+          const phonePattern = /^\d{10}$/;
+          if (!phonePattern.test(formData.phone)) {
+            alert("Please enter a valid 10-digit phone number.");
+            return;
+          }
+
+          // Send to Google Apps Script
+          fetch(
+            "https://script.google.com/macros/s/AKfycbwFUrsuEzkLUjc07z9MXmKwKSb1zGNo8gCJrmNLI0mCqkhopIjdHYqzvT2zcTKMpqL7Xg/exec",
+            {
+              method: "POST",
+              body: JSON.stringify(formData),
+            }
+          )
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.result === "success") {
+                alert("Form submitted successfully!");
+                form.reset();
+                closeModal();
+              } else {
+                alert(
+                  "Submission failed: " + (data.message || "Unknown error")
+                );
+              }
+            })
+            .catch((err) => {
+              console.error("Submission Error:", err);
+              alert("Submission failed. Please try again.");
+            });
+        });
+      });
+    </script>
 
     <!-- DO NOT CHANGE BELOW THIS -->
     <script
